@@ -36,5 +36,5 @@ steps:
   displayName: 'Terraform plan'
 - script: |
     echo Terraform apply
-    terraform apply
+    terraform apply -auto-approve
   displayName: 'Terraform apply'
