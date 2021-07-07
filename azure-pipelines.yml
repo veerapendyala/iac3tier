@@ -15,6 +15,23 @@ steps:
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    terraform init
+    pwd
+    ls -lrt
   displayName: 'Run a multi-line script'
+
+- script: |
+    echo Terraform init
+    terraform init
+  displayName: 'Terraform init'
+- script: |
+    echo Terraform validate
+    terraform validate
+  displayName: 'Terraform validate'
+- script: |
+    echo Terraform plan
+    terraform plan
+  displayName: 'Terraform plan'
+- script: |
+    echo Terraform apply
+    terraform apply
+  displayName: 'Terraform apply'
