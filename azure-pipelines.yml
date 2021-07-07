@@ -28,6 +28,9 @@ steps:
     terraform validate
   displayName: 'Terraform validate'
 - script: |
+    echo az login
+    az login
+    az account list
     echo Terraform plan
     terraform plan
   displayName: 'Terraform plan'
