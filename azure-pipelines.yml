@@ -38,6 +38,7 @@ steps:
     addSpnToEnvironment: true
 
 - script: |
+    az login --service-principal --username APP_ID --password PASSWORD --tenant 43fd35fa-5220-4a0e-9120-f0ecff75708e
     echo Terraform plan
     terraform plan
   displayName: 'Terraform plan'
