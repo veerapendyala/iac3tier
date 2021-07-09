@@ -19,14 +19,6 @@ steps:
     ls -lrt
   displayName: 'Run a multi-line script'
 
-- script: |
-    echo Terraform init
-    terraform init
-  displayName: 'Terraform init'
-- script: |
-    echo Terraform validate
-    terraform validate
-  displayName: 'Terraform validate'
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'Azure Pass - Sponsorship(9604d4da-f16c-4b80-ac1b-34bd71a69ed3)'
@@ -36,6 +28,15 @@ steps:
       az --version
       az account show
     addSpnToEnvironment: true
+
+- script: |
+    echo Terraform init
+    terraform init
+  displayName: 'Terraform init'
+- script: |
+    echo Terraform validate
+    terraform validate
+  displayName: 'Terraform validate'
 
 - script: |
     az login --service-principal --username ef5fb56b-de1e-4b68-b797-d50fa708970f --password yJ3mUPVU-Sy2pxBEuSmd2JWx6fn4E6pfym --tenant 43fd35fa-5220-4a0e-9120-f0ecff75708e
