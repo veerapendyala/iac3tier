@@ -27,9 +27,6 @@ steps:
     inlineScript: |
       az --version
       az account show
-      terraform init
-      terraform validate
-      terraform plan
     addSpnToEnvironment: true
 
 - script: |
@@ -42,7 +39,7 @@ steps:
   displayName: 'Terraform validate'
 
 - script: |
-    az login --service-principal --username ef5fb56b-de1e-4b68-b797-d50fa708970f --password yJ3mUPVU-Sy2pxBEuSmd2JWx6fn4E6pfym --tenant 43fd35fa-5220-4a0e-9120-f0ecff75708e
+    az login 
     echo Terraform plan
     terraform plan
   displayName: 'Terraform plan'
