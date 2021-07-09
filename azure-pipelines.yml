@@ -27,6 +27,9 @@ steps:
     inlineScript: |
       az --version
       az account show
+      terraform init
+      terraform validate
+      terraform plan
     addSpnToEnvironment: true
 
 - script: |
