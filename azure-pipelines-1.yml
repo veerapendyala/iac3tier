@@ -20,5 +20,6 @@ steps:
 - script: |
     az login 
     echo Terraform destroy
+    terraform init
     terraform destroy
   displayName: 'Terraform destroy'
